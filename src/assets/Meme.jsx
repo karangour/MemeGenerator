@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import memesData from "./../memesData";
+import memesData from "../memesData";
 import dummymeme from './../../public/images/dummy-meme.png'
 
 export default function Textboxes() {
