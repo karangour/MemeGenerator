@@ -79,9 +79,17 @@
   background: linear-gradient(90.41deg, #711f8d 1.14%, #a818da 100%);
 }
 
-.image {
+.meme {
+  
+  position: relative;
+  width: 500px;
+  min-height: 400px;
   margin-left: 30px;
   margin-top: 30px;
+}
+
+.image {
+  
   width: 475px;
   height: 400px;
   object-fit: contain;
@@ -90,4 +98,29 @@
   display: block;
   border-radius: 20px;
   box-shadow: 5px 8px 4px 5px #0000000d;
+}
+
+.meme--text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.top {
+  top: 40px;
+}
+
+.bottom {
+  bottom: 0;
 }
