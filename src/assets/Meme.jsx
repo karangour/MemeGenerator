@@ -5,10 +5,14 @@ export default function Textboxes() {
   const [things, setThings] = useState({
     topText: "",
     bottomText: "",
-    memeLocation: "./../../public/images/dummy-meme.png",
-    memetopText: "",
-    memebottomtext: "",
+    memeLocation: "./../../public/images/dummy-meme.png"
   });
+
+  React.useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+      .then(res => res.json())
+      .then(data => memesData = data.data.memes)
+  }, [])
 
   function handleClick() {
     let randomMeme = Math.floor(Math.random() * memesData.data.memes.length);
